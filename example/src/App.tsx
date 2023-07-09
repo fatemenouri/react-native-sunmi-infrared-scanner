@@ -1,18 +1,17 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-sunmi-infrared-scanner';
+import { StyleSheet, View, Button } from 'react-native';
+import { infraredScan } from 'react-native-sunmi-infrared-scanner';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  async function infraredScanner() {
+    let result = await infraredScan();
+    console.log('result:', result);
+  }
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Button title="infrared scan" onPress={infraredScanner}></Button>
     </View>
   );
 }

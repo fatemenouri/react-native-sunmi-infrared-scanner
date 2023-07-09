@@ -17,6 +17,6 @@ const SunmiInfraredScanner = NativeModules.SunmiInfraredScanner
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return SunmiInfraredScanner.multiply(a, b);
+export function infraredScan(): Promise<any> {
+  return SunmiInfraredScanner.openInfraredScanner();
 }

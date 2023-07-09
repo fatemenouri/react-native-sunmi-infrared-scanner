@@ -62,6 +62,13 @@ android {
     targetCompatibility JavaVersion.VERSION_1_8
   }
 
+  sourceSets {
+    main {
+          aidl.srcDirs = ['src/main/java/com']
+          jniLibs.srcDirs = ['libs']
+      }
+  }
+
 }
 
 repositories {
