@@ -11,11 +11,11 @@ npm install react-native-sunmi-infrared-scanner
 ## Usage
 
 ```js
-import { multiply } from 'react-native-sunmi-infrared-scanner';
+import { infraredScan } from 'react-native-sunmi-infrared-scanner';
 
 // ...
 
-const result = await multiply(3, 7);
+const result = await infraredScan();
 ```
 
 ## Contributing
